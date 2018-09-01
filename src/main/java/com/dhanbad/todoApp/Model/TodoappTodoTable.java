@@ -1,17 +1,24 @@
 package com.dhanbad.todoApp.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.persistence.Id;
-import java.util.List;
+import javax.persistence.Table;
 
+
+@Data
 @Entity
 @Table(name = "todolist")
-public class todoappTodoTable {
+@AllArgsConstructor
+@NoArgsConstructor
+public class TodoappTodoTable {
     @Id
-    @Column(name = "user_id")
-    private String userId;
+    @Column(name = "todo_id")
+    private String todoId;
     @Column(name = "todo_name")
     private String todoName;
     @Column(name = "todo_list")
