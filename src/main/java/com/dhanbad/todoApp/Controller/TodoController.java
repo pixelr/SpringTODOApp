@@ -22,8 +22,8 @@ public class TodoController {
 
     @ResponseStatus(value = HttpStatus.OK)
     @RequestMapping(method = RequestMethod.GET, value = "/todo")
-    public String createTodo(@RequestParam(required = true, value = "id") Long id) {
-        return todoRepository.findById(id).get().toString();
+    public TodoappTodoTable createTodo(@RequestParam(required = true, value = "id") Long id) {
+        return todoRepository.findById(id).get();
     }
 
 }
